@@ -1,0 +1,5 @@
+# Project exclude paths
+/excel-mysql/target/
+/exception/target/
+/log/target/
+/test_utils/target/
