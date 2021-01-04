@@ -43,6 +43,7 @@ public class LogController {
      */
     @RequestMapping("/err")
     public Map err(){
+        log.info("请求：/err 执行了");
         throw new RuntimeException("抛出一个异常");
     }
 
@@ -51,6 +52,7 @@ public class LogController {
      */
     @RequestMapping("/matcherr")
     public Map matcherr(){
+        log.info("请求名称：/matcherr 执行了");
         Map<String,Object> map = new HashMap<>();
         map.put("state", true);
         map.put("msg", "正常的输出");
@@ -60,6 +62,7 @@ public class LogController {
 
     @GetMapping("/myError")
     public Map MyError() throws MyException {
+        log.info("错误请求：/myError 执行了");
 
         throw new MyException();
 
